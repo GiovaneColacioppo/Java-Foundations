@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Switch {
 
-    void main(String[] args) {
+    public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
         String nome = "";
@@ -17,7 +17,7 @@ public class Switch {
 
         palavras[0] = palavras[0].substring(0, 1).toUpperCase() + palavras[0].substring(1);
         palavras[1] = palavras[1].substring(0, 1).toUpperCase() + palavras[1].substring(1);
-        
+
         IO.println("Seu nome e " + palavras[0] + " " + palavras[1]);
 
         do {
