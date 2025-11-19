@@ -3,17 +3,21 @@ import java.util.Scanner;
 public class Switch {
 
     void main(String[] args) {
+        
         Scanner input = new Scanner(System.in);
         String nome = "";
         int caso = 0;
+        
         IO.println("Digite seu nome:");
         nome = input.nextLine();
+        
         nome = nome.trim().toLowerCase();
+
         String[] palavras = nome.split(" ");
-        String var10002 = palavras[0].substring(0, 1).toUpperCase();
-        palavras[0] = var10002 + palavras[0].substring(1);
-        var10002 = palavras[1].substring(0, 1).toUpperCase();
-        palavras[1] = var10002 + palavras[1].substring(1);
+
+        palavras[0] = palavras[0].substring(0, 1).toUpperCase() + palavras[0].substring(1);
+        palavras[1] = palavras[1].substring(0, 1).toUpperCase() + palavras[1].substring(1);
+        
         IO.println("Seu nome e " + palavras[0] + " " + palavras[1]);
 
         do {
