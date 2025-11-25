@@ -4,7 +4,7 @@ public class Aula01 {
 
     public static void main(String[] args){
 
-        IO.println("Hello world");
+        System.out.println("Hello world");
 
         int idade = 30;
 
@@ -16,7 +16,7 @@ public class Aula01 {
 
         char letra = 'A';
 
-        IO.println(letra + " sua media foi de: " + media);
+        System.out.println(letra + " sua media foi de: " + media);
 
     }
 
