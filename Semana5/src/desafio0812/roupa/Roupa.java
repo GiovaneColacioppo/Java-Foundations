@@ -1,14 +1,12 @@
-package desafio0812;
+package desafio0812.roupa;
 
-import java.util.Scanner;
-
-public class Estoque {
+public class Roupa {
 
     String marca, tipo, tamanho;
     int quantidade;
     double preco;
 
-    public Estoque(String marca, String tipo, String tamanho, int quantidade, double preco) {
+    public Roupa(String marca, String tipo, String tamanho, int quantidade, double preco) {
         this.marca = marca;
         this.tipo = tipo;
         this.tamanho = tamanho;
@@ -22,12 +20,13 @@ public class Estoque {
 
     }
 
-    public void venda(){
+    public void venda(int quantidadeVendida){
 
 
-        if (this.quantidade > 0 && quantidade == this.quantidade){
+        if (quantidadeVendida > 0 && quantidadeVendida <= this.quantidade){
 
-        this.quantidade -= quantidade;
+        this.quantidade -= quantidadeVendida;
+
         }else {
 
             System.out.println("Quantidade Invalida");
@@ -36,31 +35,27 @@ public class Estoque {
 
     }
 
-    public void abastecimento(){
-        if (this.quantidade < 0){
+    public void abastecimento(int quantidadeAbastecimento){
+        if (quantidadeAbastecimento < 0){
 
-            this.quantidade += quantidade;
+            this.quantidade += quantidadeAbastecimento;
             System.out.println("Estoque abastecido");
 
-
+        } else {
+            System.out.println("Quantidade Invalida");
         }
     }
 
     @Override
     public String toString() {
-        return "Estoque{" +
+        return "Estoque{\n" +
                 "Marca= " + marca +
                 "\nTipo= " + tipo +
                 "\nTamanho= " + tamanho +
                 "\nQuantidade= " + quantidade +
                 "\nPreco= " + preco +
                 "\nValorTotal= " + valorTotal() +
-                '}';
+                "\n}";
     }
 
-    public static void main(String[] args) {
-
-
-
-    }
 }
